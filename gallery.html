@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Интересное о космосе</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1><i class="fas fa-images"></i> Фотогалерея</h1>
+            <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Удивительные находки из Космоса</span></p>
+        </div>
+        
+<nav class="main-nav">
+    <ul class="flex-nav">
+        <li><a href="index.html" class="nav-btn-link">Главная</a></li>
+        <li><a href="gallery.html" class="nav-btn-link active">Галерея</a></li>
+        <li><a href="about.html" class="nav-btn-link">О проекте</a></li>
+        <li><a href="contacts.html" class="nav-btn-link">Контакты</a></li>
+    </ul>
+</nav>
+    </header>
+
+     <div class="gallery-container"></div>
+
+
+
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i>
+                    Изображений: <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    Всего лайков: <span id="total-likes">0</span>
+                </span>
+            </div>
+            
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active">
+                    <i class="fas fa-th"></i> Сетка
+                </button>
+                <button id="list-view" class="view-btn">
+                    <i class="fas fa-list"></i> Список
+                </button>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <h3>Фильтры:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="Stars">Звезды</button>
+                <button class="filter-btn" data-filter="Neutron/Dead stars">Нейронные/Мертвые звезды</button>
+                <button class="filter-btn" data-filter="Nebulae">Туманности</button>
+                <button class="filter-btn" data-filter="The Moons">Спутники (планет)</button>
+            </div>
+        </div>
+        
+ 
+        <aside class="gallery-info">
+            <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+            <p id="fact-text">Свет от Солнца до Земли идёт 8 минут 20 секунд</p>
+        </aside>
+    </main>
+
+    
+
+    <!-- ПОДКЛЮЧЕНИЕ JAVASCRIPT -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+
+<div class="gallery-grid" id="image-gallery">
+    <!-- Карточка 1 -->
+    <article class="image-card" data-category="Stars">
+        <div class="card-image">
+            <img src="https://i.pinimg.com/736x/ec/11/3d/ec113d4ddde409fe847fdb524a8a8abb.jpg" 
+                 alt="The Sun/Солнце"
+                 class="gallery-img"
+                 loading="lazy">
+            <div class="image-overlay">
+                <button class="like-btn" data-id="1">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count">0</span>
+                    
+                </button>
+                </button>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="image-title">The Sun/Солнце</h3>
+            <p class="image-description">Всеми известное и самое главное в нашей солнечной системе, от чего и исходит ее название. Звезда, освещающая все объекты в пределах около 150 млн км.</p>
+            <div class="image-tags">
+                <span class="tag">Звезды</span>
+            </div>
+        </div>
+    </article>
+    
+    <!-- Карточка 2 -->
+    <article class="image-card" data-category="Nebulae">
+        <div class="card-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/1280px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg"
+                 alt="The Orion Nebula/Туманность Ориона"
+                 class="gallery-img"
+                 loading="lazy">
+            <div class="image-overlay">
+                <button class="like-btn" data-id="2">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count">0</span>
+                </button>
+                </button>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="image-title">The Orion Nebula/Туманность Ориона</h3>
+            <p class="image-description">Это участок межзвездной среды, выделяющийся своим излучением или поглощением излучения на общем фоне неба. Состоит в основном из газа и отчасти из пыли.</p>
+            <div class="image-tags">
+                <span class="tag">Туманности</span>
+            </div>
+        </div>
+    </article>
+    
+        <!-- Карточка 3 -->
+<article class="image-card" data-category="Neutron/Dead stars">
+        <div class="card-image">
+            <img src="https://i.ytimg.com/vi/tUy14XjTC94/maxresdefault.jpg" 
+                 alt="Quasar/Квазар"
+                 class="gallery-img"
+                 loading="lazy">
+            <div class="image-overlay">
+                <button class="like-btn" data-id="3">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count">0</span>
+                </button>
+                </button>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="image-title">Quasar/Квазар</h3>
+            <p class="image-description">Это активное ядро галактики на начальном этапе развития, являющееся одним из самых ярких объектов во Вселенной.  Сверхмассивная черная дыра в центре поглощает материю, образуя аккреционный диск, излучающий энергию, превышающую светимость всех звёзд галактики. </p>
+            <div class="image-tags">
+                <span class="tag">Нейронные/Мертвые звезды</span>
+            </div>
+        </div>
+    </article>
+    
+    <!--https://i.ytimg.com/vi/DKOLNqAdyLA/maxresdefault.jpg-->
+
+           <!-- Карточка 4 -->
+<article class="image-card" data-category="Neutron/Dead stars">
+        <div class="card-image">
+            <img src="https://i.ytimg.com/vi/DKOLNqAdyLA/maxresdefault.jpg" 
+                 alt="TON-618"
+                 class="gallery-img"
+                 loading="lazy">
+            <div class="image-overlay">
+                <button class="like-btn" data-id="4">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count">0</span>
+                </button>
+                </button>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="image-title">TON-618</h3>
+            <p class="image-description">Сверхъяркий радиогромкий квазар, расположенный вблизи Северного полюса Галактики в созвездии Гончие Псы. С квазаром связана сверхмассивная чёрная дыра.  </p>
+            <div class="image-tags">
+                <span class="tag">Нейронные/Мертвые звезды</span>
+            </div>
+        </div>
+    </article>
+    
+
+           <!-- Карточка 5 -->
+<article class="image-card" data-category="Neutron/Dead stars">
+        <div class="card-image">
+            <img src="https://hi-news.ru/wp-content/uploads/2025/08/opasnoe-mesto-vselennoi-2-750x500.png" 
+                 alt="Pulsar/Пульсар"
+                 class="gallery-img"
+                 loading="lazy">
+            <div class="image-overlay">
+                <button class="like-btn" data-id="5">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count">0</span>
+                </button>
+                </button>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="image-title">Pulsar/Пульсар</h3>
+            <p class="image-description"> Термин, который означает космический источник импульсного электромагнитного излучения. Это быстро вращающаяся нейтронная звезда, остаток массивных звёзд, переживших взрыв сверхновой. Обороты достигают до 1000 раз в секунду. </p>
+            <div class="image-tags">
+                <span class="tag">Нейронные/Мертвые звезды</span>
+            </div>
+        </div>
+    </article>
+    
+
+           <!-- Карточка 6 -->
+<article class="image-card" data-category="The Moons">
+        <div class="card-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Europa-moon.jpg/500px-Europa-moon.jpg" 
+                 alt="Europa/Европа"
+                 class="gallery-img"
+                 loading="lazy">
+            <div class="image-overlay">
+                <button class="like-btn" data-id="6">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count">0</span>
+                </button>
+                </button>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="image-title">Europa/Европа</h3>
+            <p class="image-description">Это активное ядро галактики на начальном этапе развития, являющееся одним из самых ярких объектов во Вселенной.  Сверхмассивная черная дыра в центре поглощает материю, образуя аккреционный диск, излучающий энергию, превышающую светимость всех звёзд галактики. </p>
+            <div class="image-tags">
+                <span class="tag">Спутники (планет)</span>
+            </div>
+        </div>
+    </article>
+    
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year">2026</span>© [Домницкая Полина], студент 1 курса, 2026. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+
+   
