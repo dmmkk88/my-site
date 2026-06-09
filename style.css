@@ -31,15 +31,14 @@ header h1 {
 }
 
 header, .gallery-header {
-    /* ЗАМЕНЯЕМ ЦВЕТ НА КАРТИНКУ: */
-    background-image: linear-gradient(rgba(9, 4, 29, 0.6), rgba(9, 4, 29, 0.6)), url('https://images.wallpaperscraft.ru/image/single/kosmos_vselennaia_zvezdy_163453_1920x1080.jpg') !important;
-    
-    /* НАСТРОЙКИ ДЛЯ КРАСИВОГО ОТОБРАЖЕНИЯ ФОТО: */
-    background-size: cover !important;        /* Растягивает картинку по всей ширине и высоте шапки */
-    background-position: center !important;    /* Центрирует картинку, чтобы самое интересное было в середине */
-    background-repeat: no-repeat !important;   /* Запрещает картинке размножаться плиткой */
 
-    /* Твои старые важные свойства флексбокса остаются: */
+    background-image: linear-gradient(rgba(9, 4, 29, 0.6), rgba(9, 4, 29, 0.6)), url('https://images.wallpaperscraft.ru/image/single/kosmos_vselennaia_zvezdy_163453_1920x1080.jpg') !important;
+  
+    background-size: cover !important;        
+    background-position: center !important;    
+    background-repeat: no-repeat !important;   
+
+
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
@@ -51,26 +50,26 @@ header, .gallery-header {
 
 .flex-nav {
     display: flex;
-    justify-content: center; /* Центрируем кнопки внутри меню */
-    gap: 15px;               /* Одинаковые отступы между кнопками */
+    justify-content: center; 
+    gap: 15px;              
     list-style-type: none;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;         /* Чтобы кнопки аккуратно переносились на телефонах */
+    flex-wrap: wrap;       
 }
 
 .nav-btn-link {
     display: block;
-    width: 140px;                                /* Делаем ширину всех кнопок ОДИНАКОВОЙ */
-    padding: 10px 0;                             /* Сверху и снизу 10px, по бокам 0, так как ширина фиксированная */
-    background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный белый */
-    color: white !important;                    /* Цвет текста всегда белый */
+    width: 140px;                              
+    padding: 10px 0;                             
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: white !important;                  
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px;                          /* Аккуратное скругление */
-    transition: all 0.3s ease;                   /* Плавный эффект при наведении */
-    text-align: center;                          /* Текст строго по центру кнопки */
-    border: 1px solid rgba(255, 255, 255, 0.2);  /* Легкая рамка */
+    border-radius: 8px;                          
+    transition: all 0.3s ease;                  
+    text-align: center;                         
+    border: 1px solid rgba(255, 255, 255, 0.2);  
 }
 
 .flex-nav a {
@@ -142,7 +141,7 @@ font-size: 14px;
 
 /* Шапка галереи */
 .gallery-header {
-    background: linear-gradient(135deg, #01010e 0%, #2f163d 100%);   /*KDLWOAJCFKLACsdgdzdddddddddddddddddddddddddddddddddddddddddddddddddFHLHCFJA/*/
+    background: linear-gradient(135deg, #01010e 0%, #2f163d 100%);   
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -256,23 +255,23 @@ font-size: 14px;
 /* ОСНОВНАЯ ГАЛЕРЕЯ С CSS GRID */
 .gallery-grid {
   display: flex;
-    flex-wrap: wrap;        /* Позволяет карточкам переноситься на новую строку */
-    justify-content: center; /* Центрирует карточки на экране */
-    gap: 30px;              /* Одинаковые отступы между карточками */
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px;              
     margin-bottom: 40px;
 }
 
 .gallery-grid.list-view {
     flex-direction: column;
-    align-items: stretch; /* Растягиваем карточки на всю ширину контейнера */
+    align-items: stretch; 
     max-width: 800px;
     margin: 0 auto 40px;
 }
 
 .gallery-grid.list-view .image-card {
-    width: 100%; /* Карточки занимают всю ширину */
-    max-width: none; /* Сбрасываем ограничение максимальной ширины */
-    margin-bottom: 30px; /* Отступ между карточками в режиме списка */
+    width: 100%; 
+    max-width: none; 
+    margin-bottom: 30px; 
 }
 
 
@@ -280,7 +279,7 @@ font-size: 14px;
 .image-card {
     background: white;
     border-radius: 15px;
-    overflow: hidden; /* Теперь эта строчка аккуратно закрыта дальше */
+    overflow: hidden; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     display: flex;
@@ -291,11 +290,11 @@ font-size: 14px;
 
 .flex-nav {
     display: flex;
-    justify-content: center; /* Центрируем кнопки внутри меню */
-    gap: 15px;               /* Одинаковые отступы между кнопками */
+    justify-content: center;
+    gap: 15px;               
     list-style-type: none;
     padding: 0;
-    margin: 0 auto;          /* Центрируем само меню на экране */
+    margin: 0 auto;          
     flex-wrap: wrap;
     width: 100%;            
     max-width: 850px;    
@@ -465,7 +464,7 @@ font-size: 14px;
     width: 100% !important;        
     flex-basis: 100% !important;   
     clear: both !important;        
-    margin-top: 30px;              /* Делает аккуратный отступ от карточек */
+    margin-top: 30px;
 }
 
 
